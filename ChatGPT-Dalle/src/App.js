@@ -1,4 +1,5 @@
 import { ChatContextProvider } from "./context/chatContext";
+import SideBar from "./components/SideBar";
 import ChatView from "./components/ChatView";
 import { useEffect, useState } from "react";
 import Modal from "./components/Modal";
@@ -19,6 +20,7 @@ const App = () => {
         <Setting modalOpen={modalOpen} setModalOpen={setModalOpen} />
       </Modal>
       <div className="flex transition duration-500 ease-in-out">
+        <SideBar />
         <ChatView />
       </div>
     </ChatContextProvider>
