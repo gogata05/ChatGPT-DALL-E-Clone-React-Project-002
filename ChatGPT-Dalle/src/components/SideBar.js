@@ -9,6 +9,7 @@ import {
 import { AiOutlineGithub } from "react-icons/ai";
 import { ChatContext } from "../context/chatContext";
 import bot from "../assets/bot.ico";
+import DarkMode from "./DarkMode";
 import Modal from "./Modal";
 import Setting from "./Setting";
 
@@ -69,6 +70,7 @@ const SideBar = () => {
       </div>
 
       <div className="nav__bottom">
+        <DarkMode open={open} />
         <div className="nav">
           <a
             href="https://www.buymeacoffee.com/gogata05"
