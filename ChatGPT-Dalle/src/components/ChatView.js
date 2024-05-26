@@ -6,7 +6,7 @@ import { MdSend } from "react-icons/md";
 import Filter from "bad-words";
 import { chatgpt35turbo } from "../utils/chatgpt35turbo";
 import { dalle } from "../utils/dalle";
-// import Modal from "./Modal";
+import Modal from "./Modal";
 // import Setting from "./Setting";
 
 /**
@@ -20,7 +20,7 @@ const ChatView = () => {
   const options = ["ChatGPT", "DALL·E"];
   const [selected, setSelected] = useState(options[0]);
   const [messages, addMessage] = useContext(ChatContext);
-  // const [modalOpen, setModalOpen] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
 
   /**
    * Scrolls the chat area to the bottom.
@@ -150,9 +150,11 @@ const ChatView = () => {
           </button>
         </div>
       </form>
-      {/* <Modal title="Setting" modalOpen={modalOpen} setModalOpen={setModalOpen}>
-        <Setting modalOpen={modalOpen} setModalOpen={setModalOpen} />
-      </Modal> */}
+      <Modal
+        title="Setting"
+        modalOpen={modalOpen}
+        setModalOpen={setModalOpen}
+      ></Modal>
     </div>
   );
 };
