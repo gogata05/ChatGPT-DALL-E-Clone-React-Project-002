@@ -5,7 +5,7 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { atomDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 import remarkGfm from "remark-gfm";
 import moment from "moment";
-// import Image from './Image';
+import Image from './Image';
 import person from "../assets/person.png";
 
 /**
